@@ -51,6 +51,8 @@ OpenSEO exposes an MCP server so AI agents like Claude Code, OpenClaw, and Herme
 
 ## Self-Hosting
 
+This fork's root `compose.yaml` uses the standalone `0.1.27` image with password authentication enforced. For the existing Coolify installation, follow the [password-auth rollout](./maintainer-docs/PASSWORD_AUTH_ROLLOUT.md) before deploying: the old data volume needs a one-time import, and the legacy admin must be claimed before public access is restored.
+
 OpenSEO supports two self-hosting paths. Both use email and password accounts: the first visitor creates the admin account, teammates join from invitation links, and MCP clients (Claude, ChatGPT, Codex, Cursor) sign in with the same accounts.
 
 - **Docker** - On your own server or computer, with a prebuilt image that is ready in seconds. Works with Compose-based platforms such as Coolify, Portainer and Dokploy. See [`docs/SELF_HOSTING_DOCKER.md`](./docs/SELF_HOSTING_DOCKER.md).
